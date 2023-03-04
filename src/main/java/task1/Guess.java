@@ -12,7 +12,7 @@ public class Guess {
     public static void gameCycle() {
         int number = new Random().nextInt(100);
         int maxAttempts = 10;
-        System.out.println("Я загадал число от 1 до 99. У тебя "+maxAttempts +" попыток угадать.");
+        System.out.println("РЇ Р·Р°РіР°РґР°Р» С‡РёСЃР»Рѕ РѕС‚ 1 РґРѕ 99. РЈ С‚РµР±СЏ "+ maxAttempts +" РїРѕРїС‹С‚РѕРє СѓРіР°РґР°С‚СЊ.");
 
         boolean guessed = false;
         Scanner sc = new Scanner(System.in);
@@ -20,15 +20,15 @@ public class Guess {
         for(int i = 1; i <= maxAttempts; i++) {
             int guess = sc.nextInt();
             if (guess == number) {
-                System.out.println("Ты угадал с " + i + " попытки!");
+                System.out.println("РўС‹ СѓРіР°РґР°Р» СЃ " + i + " РїРѕРїС‹С‚РєРё!");
                 guessed = true;
                 break;
             } else if (guess > number) {
-                System.out.println("Мое число меньше! Осталось " + (maxAttempts - i) + " попыток");
+                System.out.println("РњРѕРµ С‡РёСЃР»Рѕ РјРµРЅСЊС€Рµ! РћСЃС‚Р°Р»РѕСЃСЊ " + (maxAttempts - i) + " РїРѕРїС‹С‚РѕРє");
             } else {
-                System.out.println("Мое число больше! Осталось " + (maxAttempts - i) + " попыток");
+                System.out.println("РњРѕРµ С‡РёСЃР»Рѕ Р±РѕР»СЊС€Рµ! РћСЃС‚Р°Р»РѕСЃСЊ " + (maxAttempts - i) + " РїРѕРїС‹С‚РѕРє");
             }
         }
-        if(!guessed)System.out.println("Ты не угадал.");
+        if(!guessed)System.out.println("РўС‹ РЅРµ СѓРіР°РґР°Р».");
     }
 }
