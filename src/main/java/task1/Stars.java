@@ -13,7 +13,7 @@ public class Stars {
         }
     }
 
-    public static void printTemplate(int linesCount, int columnsCount, String template){
+    private static void printTemplate(int linesCount, int columnsCount, String template){
         StringBuilder strBuilder = new StringBuilder();
         for (int i = 0; i < linesCount; i++) {
             for (int j = 0; j < columnsCount; j++) {
